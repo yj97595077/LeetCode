@@ -28,9 +28,17 @@ char* longestPalindrome(char* s) {
 		length += 1;
 	}
 	
-	for(int i=1; i<=length; i++){
-		for(int j=1; j<=i && j<=(length-i); j++){
-			
+	int sum = 0;
+	for(int i=1; i<length; i++){
+		for(int j=1; j<i && j<(length-i+1); j++){
+			if(check1(*(s+i),j)){
+				continue;
+			}else{
+				break;
+			}
+		}
+		if(sum < (j-1)){
+			sum = j-1;
 		}
 	}
 	
