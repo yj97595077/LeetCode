@@ -82,3 +82,5 @@ void main(){
 		printf("index is %d\n", *(index + i));
 }
 
+//º””Õ fighting£°£°
+
